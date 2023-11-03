@@ -2,11 +2,11 @@
 The `social` package is designed to help you create your curriculum vitae (CV). It allows you to easily reference your social media profiles with the typical icon of the service plus a link to your profile.
 
 ## Features
-- Support for popular social media, developer and career platforms (based on [Font Awesome icon library](https://fontawesome.com/))
+- Support for popular social media, developer and career platforms
 - Uniform design for all entries
+- Based on the Internet's icon library [Font Awesome](https://fontawesome.com/)
 - Easy to use
 - Allows the customization of the look (extra args are passed to [`text`](https://typst.app/docs/reference/text/text/))
-- Based on the Internet's icon library [Font Awesome](https://fontawesome.com/)
 
 ## Fonts Installation
 ### Linux
@@ -39,7 +39,7 @@ This project was created by #github-info("Bi0T1N"). You can also find me on #git
 ```
 
 ### Examples
-See the [`examples.typ`](blob/main/examples/examples.typ) file for a complete example. The [generated PDF files](tree/main/examples/) are also available for preview.
+See the [`examples.typ`](examples/examples.typ) file for a complete example. The [generated PDF files](examples/) are also available for preview.
 
 ## Troubleshooting
 ### Icons are not displayed correctly
