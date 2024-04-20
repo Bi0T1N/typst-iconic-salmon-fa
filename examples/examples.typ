@@ -1,4 +1,4 @@
-#import "socialhub-fa.typ": *
+#import "../iconic-salmon-fa.typ": *
 
 = Usage Examples
 == Facebook
