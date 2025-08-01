@@ -1,4 +1,4 @@
-#import "@preview/fontawesome:0.1.0": *
+#import "@preview/fontawesome:0.5.0": *
 
   /// A function that creates a clickable link with the passed name as text.
   /// In addition to this, the associated icon of the web page is inserted
@@ -27,7 +27,7 @@
     )
 
     let clickable_link
-    if url.ends-with(regex("\.(com|org|net)/@?$")) {
+    if url.ends-with(regex("\.(com|org|net|social)\/(@|profile|pages|in|company)?\/?$")) {
       // links where the name is only appended, i.e. https://github.com/Bi0T1N
       clickable_link = url + name
     } else {
@@ -36,7 +36,8 @@
     }
 
     // unify all links
-    if not clickable_link.ends-with("/") {
+    // Google Scholar doesn't find the profile if a slash is appended -.-'
+    if not clickable_link.ends-with("/") and not clickable_link.contains("scholar.google") {
       clickable_link = clickable_link + "/"
     }
 
@@ -68,9 +69,8 @@
   url: "https://www.tiktok.com/@",
   ..args
 ) = {
-  // icon-link-generator(name, url, fa-tiktok, ..args)
-  // icon-link-generator(name, url, fa-icon.with("\u{e07b}", fa-set: "Brands"), ..args)
-  icon-link-generator(name, url, fa-icon.with("tiktok", fa-set: "Brands"), ..args)
+  // icon-link-generator(name, url, fa-icon.with("tiktok", font: "Font Awesome 6 Brands"), ..args)
+  icon-link-generator(name, url, fa-icon.with("tiktok"), ..args)
 }
 
 #let youtube-info(
@@ -160,9 +160,8 @@
   url: "https://stackoverflow.com/",
   ..args
 ) = {
-  // icon-link-generator(name, url, fa-stack-overflow, ..args)
-  // icon-link-generator(name, url, fa-icon.with("\u{f16c}", fa-set: "Brands"), ..args)
-  icon-link-generator(name, url, fa-icon.with("stack-overflow", fa-set: "Brands"), ..args)
+  // icon-link-generator(name, url, fa-icon.with("stack-overflow", font: "Font Awesome 6 Brands"), ..args)
+  icon-link-generator(name, url, fa-icon.with("stack-overflow"), ..args)
 }
 
 #let stackexchange-info(
@@ -170,9 +169,8 @@
   url: "https://stackexchange.com/",
   ..args
 ) = {
-  // icon-link-generator(name, url, fa-stack-exchange, ..args)
-  // icon-link-generator(name, url, fa-icon.with("\u{f18d}", fa-set: "Brands"), ..args)
-  icon-link-generator(name, url, fa-icon.with("stack-exchange", fa-set: "Brands"), ..args)
+  // icon-link-generator(name, url, fa-icon.with("stack-exchange", font: "Font Awesome 6 Brands"), ..args)
+  icon-link-generator(name, url, fa-icon.with("stack-exchange"), ..args)
 }
 
 #let skype-info(
@@ -212,5 +210,39 @@
   url: "https://orcid.org/",
   ..args
 ) = {
-  icon-link-generator(name, url, fa-icon.with("orcid", fa-set: "Brands"), ..args)
+  // icon-link-generator(name, url, fa-icon.with("orcid", font: "Font Awesome 6 Brands"), ..args)
+  icon-link-generator(name, url, fa-icon.with("orcid"), ..args)
+}
+
+// TODO: no icon available
+// #let tryhackme-info(
+//   name,
+//   url: "https://tryhackme.com/p/",
+//   ..args
+// ) = {
+//   icon-link-generator(name, url, fa-question, ..args)
+// }
+
+#let mastodon-info(
+  name,
+  url: "https://mastodon.social/@",
+  ..args
+) = {
+  icon-link-generator(name, url, fa-icon.with("mastodon"), ..args)
+}
+
+#let researchgate-info(
+  name,
+  url: "https://www.researchgate.net/profile/",
+  ..args
+) = {
+  icon-link-generator(name, url, fa-icon.with("researchgate"), ..args)
+}
+
+#let google-scholar-info(
+  name,
+  url: "https://scholar.google.com/citations?user=",
+  ..args
+) = {
+  icon-link-generator(name, url, fa-icon.with("google-scholar"), ..args)
 }

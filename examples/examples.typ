@@ -102,3 +102,19 @@
 #orcid-info("0000-0002-1825-0097")
 #h(1cm)
 #orcid-info("Josiah Carberry", url: "https://orcid.org/0000-0002-1825-0097", green)
+
+// == TryHackMe
+// #tryhackme-info("Bi0T1N", url: "https://tryhackme.com/p/Bi0T1N")
+
+== Mastodon
+#mastodon-info("Electronic Frontier Foundation", url: "https://mastodon.social/@eff")
+#h(1cm)
+#mastodon-info("wikiRandomImgs")
+
+== ResearchGate
+#researchgate-info("Josiah-Carberry", url: "https://www.researchgate.net/profile/Josiah-Carberry")
+#h(1cm)
+#researchgate-info("Josiah Carberry", url: "https://www.researchgate.net/profile/Josiah-Carberry", green)
+
+== Google Scholar
+#google-scholar-info("David Campbell", url: "https://scholar.google.com/citations?user=icXJxqwAAAAJ")

@@ -22,7 +22,7 @@ The package name is a combination of the acronym *SociAL Media icONs* and the wo
 ### Using Typst's package manager
 You can install the library using the [typst packages](https://github.com/typst/packages):
 ```typst
-#import "@preview/iconic-salmon-fa:1.0.0": *
+#import "@preview/iconic-salmon-fa:1.1.0": *
 ```
 
 ### Install manually
@@ -33,7 +33,7 @@ Put the `iconic-salmon-fa.typ` file in your project directory and import it:
 
 ### Minimal Example
 ```typst
-// #import "@preview/iconic-salmon-fa:1.0.0": github-info, gitlab-info
+// #import "@preview/iconic-salmon-fa:1.1.0": github-info, gitlab-info
 #import "iconic-salmon-fa.typ": github-info, gitlab-info
 
 This project was created by #github-info("Bi0T1N"). You can also find me on #gitlab-info("GitLab", rgb("#811052"), url: "https://gitlab.com/Bi0T1N").

@@ -1,6 +1,6 @@
 [package]
 name = "iconic-salmon-fa"
-version = "1.0.0"
+version = "1.1.0"
 repository = "https://github.com/Bi0T1N/typst-iconic-salmon-fa"
 entrypoint = "iconic-salmon-fa.typ"
 authors = ["Nico Neumann (Bi0T1N)"]
